@@ -1,0 +1,42 @@
+package employee;
+
+public class run {
+
+    public static void main(String[] args) { 
+
+        bos pekerja1 = new bos ();
+        pekerja1.nama();
+        System.out.println("Bagian            : "+pekerja1.nama);        
+        pekerja1.nama();
+        pekerja1.nama("Sena");
+        pekerja1.status("Menikah");
+        pekerja1.nip(441289001);
+        pekerja1.waktu(12);
+        pekerja1.show();
+        
+        System.out.println("<>-----<>-----<>-----<>-----<>");
+
+        manager pekerja2 = new manager ();
+        pekerja2.nama();
+        System.out.println("Bagian            : "+pekerja2.nama);        
+        pekerja2.nama("Iban");
+        pekerja2.status("Bujang");
+        pekerja2.nip(441289002);
+        pekerja2.waktu(10);
+        pekerja2.show();     
+       
+        System.out.println("<>-----<>-----<>-----<>-----<>");
+
+        cleaningservice pekerja3 = new cleaningservice ();
+        pekerja3.nama();
+        System.out.println("Bagian            : "+pekerja3.nama);
+        pekerja3.nama("Reyhan");
+        pekerja3.status("Bujang");
+        pekerja3.nip(441289003);
+        pekerja3.waktu(6);
+        pekerja3.show();           
+        
+
+    }
+
+}

@@ -1,0 +1,57 @@
+package employee;
+
+public class Employee {
+
+    public String nama, status;
+    public int nip, gaji = 3000000, bonus = 10000000, potongan = 100000, waktu, bonus2 = 100000;
+    public static int nomor;
+
+    void nama(String nama) {
+        this.nama = nama;
+    }
+
+    void status(String status) {
+        this.status = status;
+    }
+
+    void nip(int nip) {
+        this.nip = nip;
+    }
+
+    void waktu(int waktu) {
+        this.waktu = waktu;
+    }
+
+    void show() {
+        System.out.println("Nama              : " + this.nama);
+        System.out.println("NIP               : " + this.nip);
+        System.out.println("Status            : " + this.status);
+        System.out.println("Waktu             : " + this.waktu + " Jam");    
+
+        if (this.waktu < 8) {
+            System.out.println("Potongan          : Rp. " + this.potongan);
+            this.gaji -= this.potongan;
+        } else {
+            System.out.println("Potongan          : Rp. 0");
+        }
+        
+        if (this.waktu > 10) {
+            System.out.println("Bonus Lembur      : Rp. " + this.bonus2);
+            this.gaji -= this.bonus2;
+        } else {
+            System.out.println("Bonus Lembur      : Rp. 0");
+        }        
+        
+
+        if ("menikah".equalsIgnoreCase(this.status)) {
+            System.out.println("Bonus Menikah     : Rp. " + this.bonus);
+            this.gaji += this.bonus;
+        } else if ("bujang".equalsIgnoreCase(this.status)) {
+            System.out.println("Bonus Menikah     : Rp. 0");
+        }
+
+        System.out.println("Gaji              : Rp. "
+                + this.gaji);
+    }
+
+}
